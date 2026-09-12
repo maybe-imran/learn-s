@@ -1,0 +1,28 @@
+class fact{
+    public static void main(String[] args){
+        int[] arr = new int[10];
+        int fact;
+
+        if(args.length ==  0){
+            System.out.println("no cmd line args ");
+            return;
+        }
+
+
+        for(int i=0;i<args.length;i++){
+            arr[i]=Integer.parseInt(args[i]);
+        }
+
+        for(int i=0;i<args.length;i++){
+            fact=1;
+        
+        while(arr[i]>0){
+            fact= fact*arr[i];
+            arr[i]--;
+        }
+
+        System.out.println("fact of "+args[i]+" is : "+fact);
+        }
+    }
+
+}
