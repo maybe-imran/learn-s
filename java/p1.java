@@ -24,5 +24,4 @@ class fact{
         System.out.println("fact of "+args[i]+" is : "+fact);
         }
     }
-
 }
