@@ -1,0 +1,50 @@
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: black;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image img {
+    width: 50%;
+    height: auto;
+    border-radius: 0;
+    display: block;
+}
+
+.content {
+    width: 100%;
+    text-align: center;
+}
+
+.content h2 {
+    color: gray;
+    font-size: 36px;
+    text-align: center;
+}
+
+.content p {
+    color: white;
+    font-size: 16px;
+    padding: 20px;
+    text-align: center;
+}

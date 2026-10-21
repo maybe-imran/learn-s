@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Arithmetic Operation</title>
+</head>
+<body>
+    <h2>Enter the first number:</h2>
+    <input type="text" name="id" id="first"><br>
+
+    <h2>Enter the second number:</h2>
+    <input type="text" name="id" id="second"><br>
+
+    <button onclick="calculate()">Calculate</button>
+
+    <script>
+        function calculate() {
+            var a = document.getElementById("first").value;
+            var b = document.getElementById("second").value;
+
+            document.write("<br>The addition of two numbers is " +
+                           (Number(a) + Number(b)));
+            document.write("<br>The subtraction of two numbers is " +
+                           (a - b));
+            document.write("<br>The multiplication of two numbers is " +
+                           (a * b));
+            document.write("<br>The division of two numbers is " +
+                           (a / b));
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Form</title>
+</head>
+<body>
+
+    <div>
+        <h2>Student Login Here</h2>
+
+        <label>Username:</label>
+        <input type="text" name="u" id="uname">
+        <br><br>
+
+        <label>Password:</label>
+        <input type="password" name="p" id="psw">
+        <br><br>
+
+        <input type="button" value="Login"
+               onclick="validate()">
+
+        <input type="button" value="Cancel"
+               onclick="document.getElementById('uname').value='';
+                        document.getElementById('psw').value='';
+                        document.getElementById('result').innerHTML=''">
+
+        <h3 id="result"></h3>
+    </div>
+
+    <script>
+        function validate() {
+            let username =
+                document.getElementById("uname").value;
+
+            let password =
+                document.getElementById("psw").value;
+
+            if (username == "imran" &&
+                password == "Aliya@1234") {
+
+                document.getElementById("result").innerHTML =
+                    "Login Successfully! Welcome " + username;
+
+                document.getElementById("result").style.color = "blue";
+            }
+            else {
+                document.getElementById("result").innerHTML =
+                    "Invalid, Please Try again!";
+
+                document.getElementById("result").style.color = "black";
+            }
+        }
+    </script>
+
+</body>
+</html>

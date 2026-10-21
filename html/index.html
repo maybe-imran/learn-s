@@ -1,0 +1,242 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All HTML Programs</title>
+</head>
+<body>
+
+    <h1>1. Text Formatting Tags</h1>
+
+    <P><b> Aliya &lt; b &gt; </b></P>
+    <P><strong> Aliya &lt; strong &gt; </strong></P>
+    <P><i> Aliya &lt; i &gt; </i></P>
+    <P><em> Aliya &lt; em &gt; </em></P>
+    <P><ins> Aliya &lt; ins &gt; </ins></P>
+    <P><u> Aliya &lt; u &gt; </u></P>
+    <P><del> Aliya &lt; del &gt; </del></P>
+    <P><small> Aliya &lt; small &gt; </small></P>
+    <P><mark> Aliya &lt; mark &gt; </mark></P>
+    <P>a <sup>2</sup> + b <sup>2</sup></P>
+    <P>H <sub>2</sub> O</P>
+
+    <hr>
+
+    <h1>2. Heading and Paragraph Tags</h1>
+
+    <h1>Aliya</h1>
+    <h2>Aliya</h2>
+    <h3>Aliya</h3>
+    <h4>Aliya</h4>
+    <h5>Aliya</h5>
+    <h6>Aliya</h6>
+
+    <p>Aliya &lt; b &gt;</p>
+    <p><strong>Aliya &lt; strong &gt;</strong></p>
+    <p><i>Aliya &lt; i &gt;</i></p>
+    <p><em>Aliya &lt; em &gt;</em></p>
+    <p><del>Aliya &lt; del &gt;</del></p>
+    <p><small>Aliya &lt; small &gt;</small></p>
+    <p>Aliya &lt; big &gt;</p>
+
+    <hr>
+
+    <h1>3. Image and Paragraph</h1>
+
+    <h2 style="text-align:center;">Lotus</h2>
+
+    <center>
+        <img src="lotus.jpg" alt="lotus"
+             width="200" height="200">
+    </center>
+
+    <p style="text-align:center;">
+        The lotus is known as the sacred lotus, Indian
+        lotus, or sacred bean. It is an aquatic plant
+        with large, round leaves and beautiful flowers.
+        The lotus is a symbol of purity, enlightenment,
+        and rebirth.
+    </p>
+
+    <hr>
+
+    <h1>4. Ordered and Unordered Lists</h1>
+
+    <h2>Ordered List</h2>
+    <ol type="A">
+        <li>Coke</li>
+        <li>Pepsi</li>
+        <li>Milk</li>
+        <li>Tea</li>
+    </ol>
+
+    <h2>Unordered List</h2>
+    <ul>
+        <li>Chocolate</li>
+        <li>Milk</li>
+        <li>Cheese</li>
+        <li>Banana</li>
+    </ul>
+
+    <dl>
+        <dt>HTML</dt>
+        <dd>HTML is a markup language which is used to create web pages.</dd>
+    </dl>
+
+    <hr>
+
+    <h1>5. Day Time Table</h1>
+
+    <table border="1" cellpadding="10"
+           cellspacing="0" align="center">
+        <caption>Day Time Table</caption>
+
+        <tr>
+            <th>Day</th>
+            <th>10:00-11:00</th>
+            <th>11:00-12:00</th>
+            <th>12:00-1:00</th>
+        </tr>
+
+        <tr>
+            <th>Monday</th>
+            <td>WT</td>
+            <td>SE</td>
+            <td>DM</td>
+        </tr>
+
+        <tr>
+            <th>Tuesday</th>
+            <td>DM</td>
+            <td>WT</td>
+            <td>SE</td>
+        </tr>
+
+        <tr>
+            <th>Wednesday</th>
+            <td>SE</td>
+            <td>DM</td>
+            <td>WT</td>
+        </tr>
+
+        <tr>
+            <th>Thursday</th>
+            <td>WT</td>
+            <td>SE</td>
+            <td>DM</td>
+        </tr>
+
+        <tr>
+            <th>Friday</th>
+            <td>SE</td>
+            <td>DM</td>
+            <td>WT</td>
+        </tr>
+
+        <tr>
+            <th>Saturday</th>
+            <td>DM</td>
+            <td>WT</td>
+            <td>SE</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <h1>6. Count Number of Elements in a Form</h1>
+
+    <form id="myForm">
+        <label>Text</label>
+        <input type="text" name="text"><br><br>
+
+        <label>Password</label>
+        <input type="password" name="password"><br><br>
+
+        <input type="radio" name="gender" value="Male"> Male
+        <input type="radio" name="gender" value="Female"> Female
+        <br><br>
+
+        <input type="checkbox" name="vehicle" value="car">
+        I have a car.
+
+        <input type="checkbox" name="vehicle" value="bike">
+        I have a bike.
+        <br><br>
+
+        <label>Date</label>
+        <input type="date" name="date"><br><br>
+
+        <input type="button" value="Count" onclick="count()">
+    </form>
+
+    <script>
+        function count() {
+            var elements = document.getElementsByTagName("*");
+            alert(elements.length);
+        }
+    </script>
+
+    <hr>
+
+    <h1>7. Arithmetic Operations</h1>
+
+    <h3>Enter the first number:</h3>
+    <input type="number" id="first">
+
+    <h3>Enter the second number:</h3>
+    <input type="number" id="second">
+
+    <br><br>
+    <button onclick="calculate()">Calculate</button>
+
+    <script>
+        function calculate() {
+            var a = document.getElementById("first").value;
+            var b = document.getElementById("second").value;
+
+            document.write("<br>The addition of two numbers is " +
+                           (Number(a) + Number(b)));
+
+            document.write("<br>The subtraction of two numbers is " +
+                           (a - b));
+
+            document.write("<br>The multiplication of two numbers is " +
+                           (a * b));
+
+            document.write("<br>The division of two numbers is " +
+                           (a / b));
+        }
+    </script>
+
+    <hr>
+
+    <h1>8. Factorial Using User Defined Function</h1>
+
+    <h3>Enter a number:</h3>
+    <input type="number" id="num">
+
+    <button onclick="fact()">Calculate</button>
+
+    <script>
+        function fact() {
+            let num = parseInt(document.getElementById("num").value);
+            let factorial = 1;
+
+            if (num > 0) {
+                for (let i = 1; i <= num; i++) {
+                    factorial = factorial * i;
+                }
+
+                alert("The factorial of " + num + " is " + factorial);
+            }
+            else if (num == 0) {
+                alert("The factorial of 0 is 1");
+            }
+            else {
+                alert("Invalid Input");
+            }
+        }
+    </script>
+
+</body>
+</html>

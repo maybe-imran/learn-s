@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mathematical</title>
+</head>
+
+<body>
+
+    <label>Enter the Expression:</label>
+
+    <input type="text" name="n" id="exp"
+           placeholder="Example 10/2">
+
+    <br><br>
+
+    <button onclick="calculate()">Calculate</button>
+
+    <p id="result"></p>
+
+    <script>
+        function calculate() {
+            let exp = document.getElementById("exp").value;
+
+            try {
+                let result = eval(exp);
+
+                if (result === Infinity) {
+                    throw "Cannot divide by zero";
+                }
+
+                document.getElementById("result").innerHTML =
+                    "Result: " + result;
+            }
+
+            catch (error) {
+                document.getElementById("result").innerHTML =
+                    "Error: " + error;
+            }
+        }
+    </script>
+
+</body>
+</html>
