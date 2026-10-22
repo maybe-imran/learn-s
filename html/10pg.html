@@ -1,76 +1,55 @@
-```html
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Employee Salary Information</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text box</title>
 </head>
 <body>
-
-    <h2>Employee Salary Information</h2>
-
-    <form>
-        <label>Name:</label>
-        <input type="text" id="name">
-        <br><br>
-
-        <label>Employee ID:</label>
-        <input type="text" id="empid">
-        <br><br>
-
-        <label>Gender:</label>
-        <input type="text" id="gender">
-        <br><br>
-
-        <label>Contact:</label>
-        <input type="text" id="contact">
-        <br><br>
-
-        <label>Address:</label>
-        <input type="text" id="address">
-        <br><br>
-
-        <label>Basic Salary:</label>
-        <input type="number" id="salary">
-        <br><br>
-
-        <button type="button" onclick="calculate()">
-            Calculate
-        </button>
+    <form action="" method="post">
+        <label>name</label>
+        <input type="text" name = "name" id="name">
+        <br>
+        <br>
+        <label>gender</label>
+        <input type="text" name="gender" id="gender">
+        <br>
+        <br>
+        <label>contact</label>
+        <input type="text" name="contact" id="contact">
+        <br>
+        <br>
+        <label>address</label>
+        <input type="text" name="address" id="address">
+        <br>
+        <br>
+        <input type="submit" value="validate" onclick="validate()">
+        <br>
     </form>
-
-    <p id="result"></p>
-
     <script>
-        function calculate() {
-            var name = document.getElementById("name").value;
-            var empid = document.getElementById("empid").value;
-            var gender = document.getElementById("gender").value;
-            var contact = document.getElementById("contact").value;
-            var address = document.getElementById("address").value;
-            var salary = Number(document.getElementById("salary").value);
+        function validate(){
+            let textname=document.getElementById('name').value;
+            let textgender=document.getElementById('gender').value;
+            let textcontact=document.getElementById('contact').value;
+            let textaddress=document.getElementById('address').value;
+            
+            if(textname==""){
+                alert('please enter name : ');
+            }
 
-            var hra = salary * 0.15;
-            var da = salary * 0.20;
-            var pf = salary * 0.05;
-            var gross = salary + hra + da;
-            var net = gross - pf;
+            if(textgender==""){
+                alert('please enter gender : ');
+            }
 
-            document.getElementById("result").innerHTML =
-                "<h3>Employee Salary Information</h3>" +
-                "Employee Name: " + name + "<br>" +
-                "Employee ID: " + empid + "<br>" +
-                "Gender: " + gender + "<br>" +
-                "Contact: " + contact + "<br>" +
-                "Address: " + address + "<br>" +
-                "Basic Salary: " + salary + "<br>" +
-                "HRA: " + hra + "<br>" +
-                "DA: " + da + "<br>" +
-                "PF: " + pf + "<br>" +
-                "Gross Salary: " + gross + "<br>" +
-                "Net Salary: " + net;
+            if(textcontact==""){
+                alert('please enter contact: ');
+            }
+
+            if(textaddress==""){
+                alert('please enter address');
+            }
+
         }
     </script>
-
 </body>
 </html>
-```
